@@ -3,28 +3,10 @@
 {% block content %}
     <main class="container signup-section">
         <div class="section-content">
-            <h2>Account</h2>
+            <h2>LogIn</h2>
             
-            <form action="/SignUp" method="POST">
+            <form action="/LogIn" method="POST">
                 {{ form.hidden_tag() }}
-                <div class="form-group">
-                    {{form.f_name.label}}
-                        {% if form.f_name.errors %}
-                            {% for error in form.f_name.errors %}
-                                <p class="error-message">{{ "hey" }}</p>
-                            {% endfor %}
-                        {% endif %}
-                    {{form.f_name}}
-                </div>
-                <div class="form-group">
-                    {{form.l_name.label}}
-                    {% if form.l_name.errors %}
-                        {% for error in form.l_name.errors %}
-                            <p class="error-message">{{error}}</p>
-                        {% endfor %}
-                    {% endif %}
-                    {{form.l_name}}
-                </div>
                 <div class="form-group">
                     {{form.email.label}}
                     {% if form.email.errors %}
